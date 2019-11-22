@@ -1,22 +1,30 @@
-.App {
-  text-align: center;
+.aside {
+	background: #f4f4f4;
+	height: 100vh;
+	position: relative;
+	overflow-y: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
+.login-container {
+	padding: 1.5rem;
+	overflow-y: hidden !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.login-container h1 {
+	text-align: center;
+	margin-bottom: 3rem;
+	color: #aaa;
 }
 
-.App-link {
-  color: #09d3ac;
+.login-container button {
+	background: #3359df !important;
+	color: #ffffff !important;
+}
+
+.logo {
+	padding: 3rem;
+	color: #132793;
+}
+.logo > span {
+	color: #aaa;
 }
