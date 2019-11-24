@@ -10,9 +10,10 @@ import './App.css';
 const App = () => {
 	return (
 		<Provider store={store}>
-			<Router>
+			<Router basename={process.env.PUBLIC_URL}>
 				<Switch>
-					<PrivateRoute exact path="/dashboard" component={Dashboard} />
+					<PrivateRoute path="/dashboard" component={Dashboard} />
+					{/* <Route path="/test" component={Dashboard} /> */}
 				</Switch>
 				<Route exact path="/" component={Signin} />
 			</Router>

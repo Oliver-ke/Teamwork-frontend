@@ -12,8 +12,10 @@ export const request = async (url, method, data = null, token = null) => {
 			'Content-Type': 'application/json',
 			Authorization: `Bearer ${token}`,
 		},
-		body: data ? JSON.stringify(data) : '',
 	};
+	if (method === 'POST' || method === 'PATCH' || method === 'PUT') {
+		reqObject.body = data ? JSON.stringify(data) : '';
+	}
 	try {
 		const response = await fetch(url, reqObject);
 		const resData = await response.json();
@@ -21,4 +23,9 @@ export const request = async (url, method, data = null, token = null) => {
 	} catch (error) {
 		return error.message;
 	}
+};
+
+export const capitalize = (word) => {
+	const capital = word.charAt(0).toUpperCase() + word.slice(1);
+	return capital;
 };
