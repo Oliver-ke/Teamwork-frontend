@@ -28,3 +28,7 @@
 .logo > span {
 	color: #aaa;
 }
+
+.add-user-form {
+	margin-bottom: 3rem;
+}
